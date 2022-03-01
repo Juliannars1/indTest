@@ -5,11 +5,7 @@ import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 
 const Home =()=>  {
-  //let navigate = useNavigate();
-  // const stateHome =()=>{
-  //   localStorage.setItem('ingresado','false');
-  //   navigate('/login');
-  // }
+
         return !localStorage.getItem('ingresado') ? <Navigate to="/login"/> :(
             <>
             <Header/>

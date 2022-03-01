@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 //import Login from "../Login/Login";
-import { NavLink } from "react-router-dom";
+import { NavLink,Navigate } from "react-router-dom";
 import './Register.css';
 
 const Register =()=> {
@@ -13,7 +13,7 @@ const Register =()=> {
   const [login, setLogin] = useState(true);
 
 
-  function handleFormSubmit(e) {
+  const handleFormSubmit=(e)=> {
     e.preventDefault();
 
     if (!name || !email || !password ) {
@@ -31,7 +31,7 @@ const Register =()=> {
       setLogin(!login);
     }
   }
-  return (
+  return localStorage.getItem('ingresado') ? <Navigate to="/home"/> :(
     <>
         <div className="form-div-Rg">       
             <form className="form-primary" onSubmit={handleFormSubmit}>

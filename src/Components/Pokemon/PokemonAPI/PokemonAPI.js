@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 
 export const PokemonAPI = (url)=>{
     const [resultado, setResultado]=useState({cargando: true,data:null});

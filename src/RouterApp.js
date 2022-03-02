@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router,
     Routes,
-    Route,
-    Link,
-    Navigate, } from 'react-router-dom';
+    Route} from 'react-router-dom';
 
 import Login from './auth/Login/Login';
 import Register from './auth/Register/Register';

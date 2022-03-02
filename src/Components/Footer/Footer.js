@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => (
   <footer>
     
-      Creado por <a href="#">JR</a>
+      Creado por JR
     
   </footer>
 );

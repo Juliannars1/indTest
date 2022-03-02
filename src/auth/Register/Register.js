@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-//import Login from "../Login/Login";
+import { useState } from "react";
 import { NavLink,Navigate } from "react-router-dom";
 import './Register.css';
 
@@ -9,7 +8,7 @@ const Register =()=> {
   const [password, setPassword] = useState("");
   
 
-  const [flag, setFlag] = useState(false);
+  const [setFlag] = useState(false);
   const [login, setLogin] = useState(true);
 
 

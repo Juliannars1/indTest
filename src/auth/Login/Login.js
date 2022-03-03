@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate, Navigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import './Login.css';
+import user from "../../const/user.json"
+
 
 const Login = ()=> {
 
@@ -8,19 +10,18 @@ const Login = ()=> {
 
   const [emaillog, setEmaillog] = useState(" ");
   const [passwordlog, setPasswordlog] = useState(" ");
-
+ 
    function handleLogin(e) {
     e.preventDefault();
-    let user = JSON.parse(localStorage.getItem('user'));
- 
-    if(user.email=== emaillog && user.password === passwordlog){
-      console.log("ingreso al home");
-      localStorage.setItem('ingresado','true');
-      navigate('/home');
-    }
+    user.users.forEach((item) =>
+    {
+      if(item.user=== emaillog && item.pass === passwordlog){
+        return navigate('/home');
+      }
+    });
   }
 
-  return localStorage.getItem('ingresado') ? <Navigate to="/home"/> :(
+  return (
     <div className="form-div-Lg">
       <form className="form-primary" onSubmit={handleLogin} >
           <h3>Log in</h3>

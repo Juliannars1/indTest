@@ -22,8 +22,7 @@ const Register =()=> {
       const user = {
         name: name,
         email: email,
-        password: password,
-        ingresado:''
+        password: password
       }
       localStorage.setItem('user', JSON.stringify(user));
       console.log("Saved in Local Storage");
